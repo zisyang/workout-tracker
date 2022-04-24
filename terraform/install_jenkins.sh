@@ -5,7 +5,7 @@ sudo yum -y update
 
 echo "Install Java JDK 8"
 yum remove -y java
-yum install -y java-1.8.0-openjdk
+sudo amazon-linux-extras install java-openjdk11 -y
 
 echo "Install Maven"
 yum install -y maven 
@@ -21,11 +21,13 @@ yum install docker -y
 sudo chkconfig docker on
 
 echo "Install Jenkins"
-wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
-rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
-yum install -y jenkins
+sudo yum update –y
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade
+sudo yum install jenkins -y
 sudo usermod -a -G docker jenkins
-sudo chkconfig jenkins on
-sudo service docker start
-sudo service jenkins start
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
 
