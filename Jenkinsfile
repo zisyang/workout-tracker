@@ -14,6 +14,7 @@ pipeline {
             steps {
                 echo '=== Testing workoutplan Application ==='
                 sh 'npm install express'
+                sh 'node seeders/test.js'
             }
         }
         stage('Build Docker Image') {
@@ -23,7 +24,7 @@ pipeline {
             steps {
                 echo '=== Building workoutplan Docker Image ==='
                 script {
-                    app = docker.build("zisyang/workoutplan-spinnaker-jenkins")
+                    app = docker.build("zisyang/workoutplan")
                 }
             }
         }
