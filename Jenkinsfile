@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo '=== Testing workoutplan Application ==='
                 sh 'npm install express'
-                sh 'cp /tmp/.env' .
+                sh 'cp /tmp/.env .'
                 sh 'node seeders/test.js'
             }
         }
