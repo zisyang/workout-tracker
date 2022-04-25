@@ -4,11 +4,13 @@
 sudo yum -y update
 
 echo "Install Java JDK 8"
-yum remove -y java
+sudo yum remove -y java
+sudo yum remove java-17-amazon-corretto
 sudo amazon-linux-extras install java-openjdk11 -y
+sudo alternatives --config java
 
-echo "Install Maven"
-yum install -y maven 
+#echo "Install Maven"
+#yum install -y maven 
 
 echo "Install git"
 yum install -y git
