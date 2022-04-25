@@ -30,7 +30,7 @@ let workoutSeed = [
       {
         type: "resistance",
         name: "Bicep Curl",
-        duration: 20,
+        duration: 30,
         weight: 100,
         reps: 10,
         sets: 4
@@ -43,8 +43,8 @@ let workoutSeed = [
       {
         type: "resistance",
         name: "Lateral Pull",
-        duration: 20,
-        weight: 300,
+        duration: 30,
+        weight: 145,
         reps: 10,
         sets: 4
       }
@@ -80,8 +80,8 @@ let workoutSeed = [
       {
         type: "resistance",
         name: "Bench Press",
-        duration: 20,
-        weight: 285,
+        duration: 30,
+        weight: 205,
         reps: 10,
         sets: 4
       }
@@ -94,7 +94,7 @@ let workoutSeed = [
         type: "resistance",
         name: "Bench Press",
         duration: 20,
-        weight: 300,
+        weight: 205,
         reps: 10,
         sets: 4
       }
@@ -107,7 +107,7 @@ let workoutSeed = [
         type: "resistance",
         name: "Quad Press",
         duration: 30,
-        weight: 300,
+        weight: 175,
         reps: 10,
         sets: 4
       }
@@ -120,7 +120,7 @@ let workoutSeed = [
         type: "resistance",
         name: "Bench Press",
         duration: 20,
-        weight: 300,
+        weight: 170,
         reps: 10,
         sets: 4
       }
@@ -133,7 +133,7 @@ let workoutSeed = [
         type: "resistance",
         name: "Military Press",
         duration: 20,
-        weight: 300,
+        weight: 170,
         reps: 10,
         sets: 4
       }
